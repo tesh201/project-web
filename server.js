@@ -37,7 +37,7 @@ app.post('/submit-form', (req, res) => {
 
   data.push(formData);
   console.log('Updated data:', data);
-
+  
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     console.log('Data saved to file.');
